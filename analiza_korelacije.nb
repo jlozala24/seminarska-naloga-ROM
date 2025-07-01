@@ -1,0 +1,1065 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     40744,       1057]
+NotebookOptionsPosition[     38039,       1005]
+NotebookOutlinePosition[     38432,       1021]
+CellTagsIndexPosition[     38389,       1018]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Analiza korelacije \[SHacek]tevila ilegalnih migracij glede na \
+politi\[CHacek]no stranko v Republiki Sloveniji za obdobje 2017-2024\
+\>", "Title",
+ CellChangeTimes->{{3.960008674059485*^9, 
+  3.9600087021781073`*^9}},ExpressionUUID->"88418f0e-da48-4f6c-8dad-\
+608912bc2d02"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "Podatki", "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"leta", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"2017", ",", "2024"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"migracije", "=", 
+     RowBox[{"{", 
+      RowBox[{
+      "1930", ",", "9149", ",", "16099", ",", "14592", ",", "10067", ",", 
+       "32024", ",", "60587", ",", "46192"}], "}"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"stranke", "=", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<SMC\>\"", ",", "\"\<SMC\>\"", ",", "\"\<LM\[CapitalSHacek]\>\"", 
+       ",", "\"\<LM\[CapitalSHacek]\>\"", ",", "\"\<SDS\>\"", ",", 
+       "\"\<SDS\>\"", ",", "\"\<Gibanje Svoboda\>\"", ",", 
+       "\"\<Gibanje Svoboda\>\""}], "}"}]}], ";"}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.960008708403689*^9, 3.96000872249765*^9}},
+ CellLabel->"In[69]:=",ExpressionUUID->"cef359a3-b887-4952-b1d2-9f79f957421d"],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Stolpi\[CHacek]ni", " ", "diagram", " ", "\[SHacek]tevila", " ", 
+    "migracij", " ", "po", " ", "letih"}], "*)"}], 
+  RowBox[{
+   RowBox[{"grafLeta", "=", 
+    RowBox[{"BarChart", "[", 
+     RowBox[{"migracije", ",", 
+      RowBox[{"ChartLabels", "->", 
+       RowBox[{"Placed", "[", 
+        RowBox[{"leta", ",", "Below"}], "]"}]}], ",", 
+      RowBox[{"ChartStyle", "->", 
+       RowBox[{"ColorData", "[", 
+        RowBox[{"97", ",", "\"\<ColorList\>\""}], "]"}]}], ",", 
+      RowBox[{"AxesLabel", "->", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<Leto\>\"", ",", 
+         "\"\<\[CapitalSHacek]tevilo ilegalnih migracij\>\""}], "}"}]}], ",", 
+      
+      RowBox[{
+      "PlotLabel", "->", 
+       "\"\<\[CapitalSHacek]tevilo ilegalnih migracij v RS po letih\>\""}], 
+      ",", 
+      RowBox[{"ImageSize", "->", "Large"}]}], "]"}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.96000873251305*^9, 3.960008733961197*^9}},
+ CellLabel->"In[72]:=",ExpressionUUID->"9bba24f8-3fa8-4963-ab50-29808a166089"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["%72"], "Input",
+ NumberMarks->False,
+ CellLabel->"In[73]:=",ExpressionUUID->"19ef136f-6292-4f44-adda-fcd7c729503f"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {Opacity[0], 
+    PointBox[{{0.39075018208302986`, 0.}, {8.451201747997086, 0.}}]}, {{}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{Opacity[0.644], 
+     Thickness[Small]}], 
+     {RGBColor[0.368417, 0.506779, 0.709798], EdgeForm[{Opacity[0.644], 
+      Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{0.5487982520029133, 0.}, {1.4512017479970867, 1930.},
+          RoundingRadius->0],
+         StatusArea[#, 1930]& ,
+         TagBoxNote->"1930"],
+        StyleBox["1930", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[1930, {}], "Tooltip"]& ]}, 
+     {RGBColor[0.880722, 0.611041, 0.142051], EdgeForm[{Opacity[0.644], 
+      Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{1.5487982520029133, 0.}, {2.4512017479970867, 9149.},
+          RoundingRadius->0],
+         StatusArea[#, 9149]& ,
+         TagBoxNote->"9149"],
+        StyleBox["9149", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[9149, {}], "Tooltip"]& ]}, 
+     {RGBColor[0.560181, 0.691569, 0.194885], EdgeForm[{Opacity[0.644], 
+      Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{2.5487982520029133, 0.}, {3.4512017479970867, 16099.},
+          RoundingRadius->0],
+         StatusArea[#, 16099]& ,
+         TagBoxNote->"16099"],
+        StyleBox["16099", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[16099, {}], "Tooltip"]& ]}, 
+     {RGBColor[0.922526, 0.385626, 0.209179], EdgeForm[{Opacity[0.644], 
+      Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{3.5487982520029133, 0.}, {4.451201747997087, 14592.},
+          RoundingRadius->0],
+         StatusArea[#, 14592]& ,
+         TagBoxNote->"14592"],
+        StyleBox["14592", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[14592, {}], "Tooltip"]& ]}, 
+     {RGBColor[0.528488, 0.470624, 0.701351], EdgeForm[{Opacity[0.644], 
+      Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{4.548798252002913, 0.}, {5.451201747997087, 10067.},
+          RoundingRadius->0],
+         StatusArea[#, 10067]& ,
+         TagBoxNote->"10067"],
+        StyleBox["10067", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[10067, {}], "Tooltip"]& ]}, 
+     {RGBColor[0.772079, 0.431554, 0.102387], EdgeForm[{Opacity[0.644], 
+      Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{5.548798252002913, 0.}, {6.451201747997087, 32024.},
+          RoundingRadius->0],
+         StatusArea[#, 32024]& ,
+         TagBoxNote->"32024"],
+        StyleBox["32024", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[32024, {}], "Tooltip"]& ]}, 
+     {RGBColor[0.363898, 0.618501, 0.782349], EdgeForm[{Opacity[0.644], 
+      Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{6.548798252002913, 0.}, {7.451201747997087, 60587.},
+          RoundingRadius->0],
+         StatusArea[#, 60587]& ,
+         TagBoxNote->"60587"],
+        StyleBox["60587", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[60587, {}], "Tooltip"]& ]}, 
+     {RGBColor[1, 0.75, 0], EdgeForm[{Opacity[0.644], Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{7.548798252002913, 0.}, {8.451201747997086, 46192.},
+          RoundingRadius->0],
+         StatusArea[#, 46192]& ,
+         TagBoxNote->"46192"],
+        StyleBox["46192", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[46192, {}], "Tooltip"]& ]}}, {}, {}}, {}, {
+    InsetBox["2017", Offset[{0, -4}, {1., 0.}], ImageScaled[{0.5, 1}]], 
+    InsetBox["2018", Offset[{0, -4}, {2., 0.}], ImageScaled[{0.5, 1}]], 
+    InsetBox["2019", Offset[{0, -4}, {3., 0.}], ImageScaled[{0.5, 1}]], 
+    InsetBox["2020", Offset[{0, -4}, {4., 0.}], ImageScaled[{0.5, 1}]], 
+    InsetBox["2021", Offset[{0, -4}, {5., 0.}], ImageScaled[{0.5, 1}]], 
+    InsetBox["2022", Offset[{0, -4}, {6., 0.}], ImageScaled[{0.5, 1}]], 
+    InsetBox["2023", Offset[{0, -4}, {7., 0.}], ImageScaled[{0.5, 1}]], 
+    InsetBox["2024", Offset[{0, -4}, {8., 0.}], 
+     ImageScaled[{0.5, 1}]]}, {}, {}, 
+   StyleBox[{
+     {Thickness[Tiny], 
+      LineBox[{{0.39075018208302986`, 0.}, {8.612410779315367, 0.}}], 
+      StyleBox[
+       {Thickness[Tiny], InsetBox[
+         TagBox["\<\"Leto\"\>",
+          HoldForm], Offset[{10., 0.}, {8.451201747997084, 0.}], NCache[
+         ImageScaled[{0, Rational[1, 2]}], ImageScaled[{0, 0.5}]], 
+         Automatic, {1, 0}]}, "GraphicsLabel",
+       StripOnInput->False]}, 
+     StyleBox[{
+       {Thickness[Tiny], 
+        LineBox[{{0.5487982520029133, 0.}, 
+          Offset[{-1.102182119232618*^-15, -6.}, {0.5487982520029133, 0.}]}], 
+        LineBox[{{8.451201747997086, 0.}, 
+          Offset[{-1.102182119232618*^-15, -6.}, {8.451201747997086, 
+           0.}]}], {{}, {}, {}, {}, {}, {}, {}, {}, {}, {}}}, 
+       StyleBox[{}, "GraphicsLabel",
+        StripOnInput->False]}, "GraphicsTicks",
+      StripOnInput->False]}, "GraphicsAxes",
+    StripOnInput->False,
+    Antialiasing->False]},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, True},
+  AxesLabel->{
+    FormBox[
+     TagBox["\"Leto\"", HoldForm], TraditionalForm], 
+    FormBox[
+     TagBox["\"\[CapitalSHacek]tevilo ilegalnih migracij\"", HoldForm], 
+     TraditionalForm]},
+  AxesOrigin->{0.39075018208302986`, 0.},
+  CoordinatesToolOptions:>{"DisplayFunction" -> ({
+      Identity[
+       Part[#, 1]], 
+      Identity[
+       Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+      Identity[
+       Part[#, 1]], 
+      Identity[
+       Part[#, 2]]}& )},
+  DisplayFunction->Identity,
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->Large,
+  PlotLabel->FormBox[
+   "\"\[CapitalSHacek]tevilo ilegalnih migracij v RS po letih\"", 
+    TraditionalForm],
+  PlotRange->{{All, All}, {All, All}},
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{None, Automatic}]], "Output",
+ CellChangeTimes->{3.960008740081333*^9},
+ CellLabel->"Out[73]=",ExpressionUUID->"980507c1-d052-40b3-8e41-49d5e178bd6d"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Zdru\[ZHacek]evanje", " ", "podatkov", " ", "po", " ", "strankah"}], 
+   "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"skupnoPoStrankah", "=", 
+     RowBox[{"Total", "/@", 
+      RowBox[{
+       RowBox[{"GatherBy", "[", 
+        RowBox[{
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{"stranke", ",", "migracije"}], "}"}], "]"}], ",", 
+         "First"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "All", ",", "2"}], "]"}], "]"}]}]}], ";"}], "\n", 
+   
+   RowBox[{
+    RowBox[{"edinstveneStranke", "=", 
+     RowBox[{"DeleteDuplicates", "[", "stranke", "]"}]}], ";"}], 
+   "\n"}]}]], "Input",
+ CellChangeTimes->{{3.9600087482004223`*^9, 3.9600087555996103`*^9}},
+ CellLabel->"In[74]:=",ExpressionUUID->"a978315d-3947-4a2a-beea-6f680b13abd1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"11079", ",", "30691", ",", "42091", ",", "106779"}], 
+  "}"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[76]:=",ExpressionUUID->"21c63278-22a5-4ca6-b5e2-134bcfa77389"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"11079", ",", "30691", ",", "42091", ",", "106779"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.960008757910055*^9},
+ CellLabel->"Out[76]=",ExpressionUUID->"3b355c24-bc75-4ad8-9045-0282690dc2bd"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Seznam", " ", "let", " ", "in", " ", "njim", " ", "pripadajo\[CHacek]e", 
+    " ", "\[SHacek]tevilo", " ", "migracij"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.9600145225078573`*^9, 3.960014531768756*^9}, {
+  3.9600145768152933`*^9, 
+  3.960014588350746*^9}},ExpressionUUID->"0166d548-c962-46cb-94ab-\
+ecd2549935c9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{"Function", "[", 
+      RowBox[{
+       RowBox[{"{", "pair", "}"}], ",", 
+       RowBox[{
+        RowBox[{"ToString", "[", 
+         RowBox[{"pair", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<: \>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"pair", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "]"}]}]}], "]"}], ",", 
+     RowBox[{"Transpose", "[", 
+      RowBox[{"{", 
+       RowBox[{"leta", ",", "migracije"}], "}"}], "]"}]}], "]"}], 
+   "\n"}]}]], "Input",
+ CellChangeTimes->{{3.960014487948051*^9, 3.960014488825449*^9}},
+ CellLabel->"In[90]:=",ExpressionUUID->"5aa80816-cdb9-422e-a75a-4ae752ac0253"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"2017: 1930\"\>", ",", "\<\"2018: 9149\"\>", 
+   ",", "\<\"2019: 16099\"\>", ",", "\<\"2020: 14592\"\>", 
+   ",", "\<\"2021: 10067\"\>", ",", "\<\"2022: 32024\"\>", 
+   ",", "\<\"2023: 60587\"\>", ",", "\<\"2024: 46192\"\>"}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.960014490027028*^9},
+ CellLabel->"Out[90]=",ExpressionUUID->"7756c242-5775-4774-b1ae-839ecda68289"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Stolpi\[CHacek]ni", " ", "diagram", " ", "\[SHacek]tevila", " ", 
+    "migracij", " ", "po", " ", "strankah"}], "*)"}], 
+  RowBox[{
+   RowBox[{"grafStranke", "=", 
+    RowBox[{"BarChart", "[", 
+     RowBox[{"skupnoPoStrankah", ",", 
+      RowBox[{"ChartLabels", "->", 
+       RowBox[{"Placed", "[", 
+        RowBox[{"edinstveneStranke", ",", "Below"}], "]"}]}], ",", 
+      RowBox[{"ChartStyle", "->", 
+       RowBox[{"ColorData", "[", 
+        RowBox[{"112", ",", "\"\<ColorList\>\""}], "]"}]}], ",", 
+      RowBox[{"AxesLabel", "->", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<Stranka\>\"", ",", 
+         "\"\<Skupno \[SHacek]tevilo ilegalnih migracij\>\""}], "}"}]}], ",", 
+      
+      RowBox[{
+      "PlotLabel", "->", 
+       "\"\<Skupno \[SHacek]tevilo ilegalnih migracij glede na vodilno \
+stranko\>\""}], ",", 
+      RowBox[{"ImageSize", "->", "Large"}]}], "]"}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.9600087602617064`*^9, 3.96000876847147*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"0dcbbb5a-d8e1-4cee-8c4b-888f47acf86b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["%77"], "Input",
+ NumberMarks->False,
+ CellLabel->"In[78]:=",ExpressionUUID->"55a0bcb7-42e4-4b22-a43c-9e06b73a70dd"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {Opacity[0], 
+    PointBox[{{0.0195484340859432, 0.}, {4.902403495994173, 0.}}]}, {{}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{Opacity[
+     0.6719999999999999], Thickness[Small]}], 
+     {RGBColor[0.790588, 0.201176, 0.], EdgeForm[{Opacity[0.6719999999999999],
+       Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{0.5487982520029133, 0.}, {1.4512017479970867, 11079.},
+          RoundingRadius->0],
+         StatusArea[#, 11079]& ,
+         TagBoxNote->"11079"],
+        StyleBox["11079", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[11079, {}], "Tooltip"]& ]}, 
+     {RGBColor[0.192157, 0.388235, 0.807843], EdgeForm[{Opacity[
+      0.6719999999999999], Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{1.5487982520029133, 0.}, {2.4512017479970867, 30691.},
+          RoundingRadius->0],
+         StatusArea[#, 30691]& ,
+         TagBoxNote->"30691"],
+        StyleBox["30691", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[30691, {}], "Tooltip"]& ]}, 
+     {RGBColor[1., 0.607843, 0.], EdgeForm[{Opacity[0.6719999999999999], 
+      Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{2.5487982520029133, 0.}, {3.4512017479970867, 42091.},
+          RoundingRadius->0],
+         StatusArea[#, 42091]& ,
+         TagBoxNote->"42091"],
+        StyleBox["42091", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[42091, {}], "Tooltip"]& ]}, 
+     {RGBColor[0., 0.596078, 0.109804], EdgeForm[{Opacity[0.6719999999999999],
+       Thickness[Small]}], 
+      TagBox[
+       TooltipBox[
+        TagBox[
+         RectangleBox[{3.5487982520029133, 0.}, {4.451201747997087, 106779.},
+          RoundingRadius->0],
+         StatusArea[#, 106779]& ,
+         TagBoxNote->"106779"],
+        StyleBox["106779", {}, StripOnInput -> False]],
+       Annotation[#, 
+        Style[106779, {}], "Tooltip"]& ]}}, {}, {}}, {}, {
+    InsetBox["\<\"SMC\"\>", Offset[{0, -4}, {1., 0.}], ImageScaled[{0.5, 1}]],
+     InsetBox["\<\"LM\[CapitalSHacek]\"\>", Offset[{0, -4}, {2., 0.}], 
+     ImageScaled[{0.5, 1}]], 
+    InsetBox["\<\"SDS\"\>", Offset[{0, -4}, {3., 0.}], ImageScaled[{0.5, 1}]],
+     InsetBox["\<\"Gibanje Svoboda\"\>", Offset[{0, -4}, {4., 0.}], 
+     ImageScaled[{0.5, 1}]]}, {}, {}, 
+   StyleBox[
+    StyleBox[{
+      {Thickness[Tiny], 
+       LineBox[{{0.0195484340859432, 0.}, {4.991036562272396, 0.}}], 
+       StyleBox[
+        {Thickness[Tiny], InsetBox[
+          TagBox["\<\"Stranka\"\>",
+           HoldForm], Offset[{10., 0.}, {4.451201747997087, 0.}], NCache[
+          ImageScaled[{0, Rational[1, 2]}], ImageScaled[{0, 0.5}]], 
+          Automatic, {1, 0}]}, "GraphicsLabel",
+        StripOnInput->False]}, 
+      StyleBox[{
+        {Thickness[Tiny], 
+         LineBox[{{0.5487982520029133, 0.}, 
+           Offset[{-1.102182119232618*^-15, -6.}, {0.5487982520029133, 0.}]}],
+          LineBox[{{4.451201747997087, 0.}, 
+           Offset[{-1.102182119232618*^-15, -6.}, {4.451201747997087, 
+            0.}]}], {{}, {}, {}, {}, {}, {}}}, 
+        StyleBox[{}, "GraphicsLabel",
+         StripOnInput->False]}, "GraphicsTicks",
+       StripOnInput->False]},
+     Antialiasing->False], "GraphicsAxes",
+    StripOnInput->False]},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, True},
+  AxesLabel->{
+    FormBox[
+     TagBox["\"Stranka\"", HoldForm], TraditionalForm], 
+    FormBox[
+     TagBox["\"Skupno \[SHacek]tevilo ilegalnih migracij\"", HoldForm], 
+     TraditionalForm]},
+  AxesOrigin->{0.0195484340859432, 0.},
+  CoordinatesToolOptions:>{"DisplayFunction" -> ({
+      Identity[
+       Part[#, 1]], 
+      Identity[
+       Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+      Identity[
+       Part[#, 1]], 
+      Identity[
+       Part[#, 2]]}& )},
+  DisplayFunction->Identity,
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->Large,
+  PlotLabel->FormBox[
+   "\"Skupno \[SHacek]tevilo ilegalnih migracij glede na vodilno stranko\"", 
+    TraditionalForm],
+  PlotRange->{{All, All}, {All, All}},
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{None, Automatic}]], "Output",
+ CellChangeTimes->{3.960008770900044*^9},
+ CellLabel->"Out[78]=",ExpressionUUID->"0a7b085f-d98d-4a26-927e-38186ec36679"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Tortni", " ", "diagram", " ", "dele\[ZHacek]a", " ", "migracij", " ", 
+    "po", " ", "strankah"}], "*)"}], 
+  RowBox[{
+   RowBox[{"grafTorta", "=", 
+    RowBox[{"PieChart", "[", 
+     RowBox[{"skupnoPoStrankah", ",", 
+      RowBox[{"ChartLabels", "->", "edinstveneStranke"}], ",", 
+      RowBox[{"ChartStyle", "->", "\"\<Pastel\>\""}], ",", 
+      RowBox[{
+      "PlotLabel", "->", 
+       "\"\<Dele\[ZHacek] ilegalnih migracij po strankah\>\""}], ",", 
+      RowBox[{"ImageSize", "->", "Large"}]}], "]"}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.96000877435847*^9, 3.960008781485889*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"ed292a72-6443-4ac2-985c-94cbcf303305"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["%79"], "Input",
+ NumberMarks->False,
+ CellLabel->"In[80]:=",ExpressionUUID->"c93eed21-e1c7-4b11-8b1b-8408dd0ff411"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   DynamicModuleBox[{DynamicChart`click$13378$13820 = False, 
+    DynamicChart`click$13386$13820 = False, DynamicChart`click$13394$13820 = 
+    False, DynamicChart`click$13402$13820 = False}, {
+     {RGBColor[0.5, 0.5, 1.], EdgeForm[{GrayLevel[0], Opacity[0.5]}], {{{}, {
+         {RGBColor[0.761959, 0.470832, 0.940597], EdgeForm[{GrayLevel[0], 
+          Opacity[0.5]}], 
+          TagBox[GeometricTransformationBox[
+            TagBox[
+             TagBox[
+              TooltipBox[
+               TagBox[{
+                 TagBox[
+                  DynamicBox[{
+                    FEPrivate`If[
+                    CurrentValue["MouseOver"], 
+                    EdgeForm[{
+                    GrayLevel[0.5], 
+                    AbsoluteThickness[2.5], 
+                    Opacity[0.66]}], {}, {}], 
+                    
+                    DiskBox[{0, 0}, 1., {2.776446776448361, 
+                    3.141592653589793}]},
+                   
+                   ImageSizeCache->{{51.29411977096021, 
+                    288.91421356237305`}, {-80.75492686367738, 
+                    5.914213562373121}}],
+                  "DelayedMouseEffectStyle"], {}},
+                StatusArea[#, 11079]& ,
+                TagBoxNote->"11079"],
+               StyleBox["11079", {}, StripOnInput -> False]],
+              Annotation[#, 
+               Style[11079, {}], "Tooltip"]& ],
+             
+             EventHandlerTag[{
+              "MouseClicked" :> 
+               FEPrivate`Set[DynamicChart`click$13378$13820, 
+                 FEPrivate`Not[DynamicChart`click$13378$13820]], 
+               PassEventsDown -> True, Method -> "Preemptive", PassEventsUp -> 
+               True}]], Dynamic[
+            FEPrivate`If[
+             DynamicChart`click$13378$13820, {{{1., 0.}, {0., 
+               1.}}, {-0.19667596093488401`, 0.036312069485778135`}}, {{1, 
+              0}, {0, 1}}, {{1, 0}, {0, 1}}], 
+             TrackedSymbols :> {DynamicChart`click$13378$13820}]],
+           "DelayedClickEffect"]}, 
+         {RGBColor[0.927848, 0.742785, 0.6151383333333333], EdgeForm[{
+          GrayLevel[0], Opacity[0.5]}], 
+          TagBox[GeometricTransformationBox[
+            TagBox[
+             TagBox[
+              TooltipBox[
+               TagBox[{
+                 TagBox[
+                  DynamicBox[{
+                    FEPrivate`If[
+                    CurrentValue["MouseOver"], 
+                    EdgeForm[{
+                    GrayLevel[0.5], 
+                    AbsoluteThickness[2.5], 
+                    Opacity[0.66]}], {}, {}], 
+                    
+                    DiskBox[{0, 0}, 1., {1.764921177084908, 
+                    2.776446776448361}]},
+                   
+                   ImageSizeCache->{{66.77353979088895, 
+                    288.91421356237305`}, {-227.29575749513563`, 
+                    5.9142135623731065`}}],
+                  "DelayedMouseEffectStyle"], {}},
+                StatusArea[#, 30691]& ,
+                TagBoxNote->"30691"],
+               StyleBox["30691", {}, StripOnInput -> False]],
+              Annotation[#, 
+               Style[30691, {}], "Tooltip"]& ],
+             
+             EventHandlerTag[{
+              "MouseClicked" :> 
+               FEPrivate`Set[DynamicChart`click$13386$13820, 
+                 FEPrivate`Not[DynamicChart`click$13386$13820]], 
+               PassEventsDown -> True, Method -> "Preemptive", PassEventsUp -> 
+               True}]], Dynamic[
+            FEPrivate`If[
+             DynamicChart`click$13386$13820, {{{1., 0.}, {0., 
+               1.}}, {-0.12882635062613726`, 0.1529829120665166}}, {{1, 0}, {
+              0, 1}}, {{1, 0}, {0, 1}}], 
+             TrackedSymbols :> {DynamicChart`click$13386$13820}]],
+           "DelayedClickEffect"]}, 
+         {RGBColor[0.929162, 0.95034, 0.6648153333333333], EdgeForm[{
+          GrayLevel[0], Opacity[0.5]}], 
+          TagBox[GeometricTransformationBox[
+            TagBox[
+             TagBox[
+              TooltipBox[
+               TagBox[{
+                 TagBox[
+                  DynamicBox[{
+                    FEPrivate`If[
+                    CurrentValue["MouseOver"], 
+                    EdgeForm[{
+                    GrayLevel[0.5], 
+                    AbsoluteThickness[2.5], 
+                    Opacity[0.66]}], {}, {}], 
+                    
+                    DiskBox[{0, 0}, 1., {0.37767006103111056`, 
+                    1.764921177084908}]},
+                   
+                   ImageSizeCache->{{240.79261972047516`, 
+                    507.1592512423134}, {-231.7058802290397, 
+                    5.9142135623731065`}}],
+                  "DelayedMouseEffectStyle"], {}},
+                StatusArea[#, 42091]& ,
+                TagBoxNote->"42091"],
+               StyleBox["42091", {}, StripOnInput -> False]],
+              Annotation[#, 
+               Style[42091, {}], "Tooltip"]& ],
+             
+             EventHandlerTag[{
+              "MouseClicked" :> 
+               FEPrivate`Set[DynamicChart`click$13394$13820, 
+                 FEPrivate`Not[DynamicChart`click$13394$13820]], 
+               PassEventsDown -> True, Method -> "Preemptive", PassEventsUp -> 
+               True}]], Dynamic[
+            FEPrivate`If[
+             DynamicChart`click$13394$13820, {{{1., 0.}, {0., 1.}}, {
+               0.09579746173607126, 0.17556436519102037`}}, {{1, 0}, {0, 
+              1}}, {{1, 0}, {0, 1}}], 
+             TrackedSymbols :> {DynamicChart`click$13394$13820}]],
+           "DelayedClickEffect"]}, 
+         {RGBColor[0.431296, 0.709773, 0.927077], EdgeForm[{GrayLevel[0], 
+          Opacity[0.5]}], 
+          TagBox[GeometricTransformationBox[
+            TagBox[
+             TagBox[
+              TooltipBox[
+               TagBox[{
+                 TagBox[
+                  DynamicBox[{
+                    FEPrivate`If[
+                    CurrentValue["MouseOver"], 
+                    EdgeForm[{
+                    GrayLevel[0.5], 
+                    AbsoluteThickness[2.5], 
+                    Opacity[0.66]}], {}, {}], 
+                    
+                    DiskBox[{0, 0}, 1., {-3.141592653589793, 
+                    0.37767006103111056`}]},
+                   
+                   ImageSizeCache->{{51.29411977096021, 
+                    523.7058802290396}, {-83.49498662540657, 
+                    240.70588022903974`}}],
+                  "DelayedMouseEffectStyle"], {}},
+                StatusArea[#, 106779]& ,
+                TagBoxNote->"106779"],
+               StyleBox["106779", {}, StripOnInput -> False]],
+              Annotation[#, 
+               Style[106779, {}], "Tooltip"]& ],
+             
+             EventHandlerTag[{
+              "MouseClicked" :> 
+               FEPrivate`Set[DynamicChart`click$13402$13820, 
+                 FEPrivate`Not[DynamicChart`click$13402$13820]], 
+               PassEventsDown -> True, Method -> "Preemptive", PassEventsUp -> 
+               True}]], Dynamic[
+            FEPrivate`If[
+             DynamicChart`click$13402$13820, {{{1., 0.}, {0., 1.}}, {
+               0.037542952422496056`, -0.196444716710331}}, {{1, 0}, {0, 
+              1}}, {{1, 0}, {0, 1}}], 
+             TrackedSymbols :> {DynamicChart`click$13402$13820}]],
+           "DelayedClickEffect"]}}}, {}}, {}}, {{{
+        TagBox[GeometricTransformationBox[
+          TagBox[
+           TagBox[
+            TooltipBox[
+             
+             TagBox[{{}, {{}, 
+                InsetBox["\<\"SMC\"\>", \
+{-0.6555865364496133, 0.12104023161926045}]}},
+              StatusArea[#, 11079]& ,
+              TagBoxNote->"11079"],
+             StyleBox["11079", {}, StripOnInput -> False]],
+            Annotation[#, 
+             Style[11079, {}], "Tooltip"]& ],
+           
+           EventHandlerTag[{
+            "MouseClicked" :> FEPrivate`Set[DynamicChart`click$13378$13820, 
+               FEPrivate`Not[DynamicChart`click$13378$13820]], PassEventsDown -> 
+             True, Method -> "Preemptive", PassEventsUp -> True}]], Dynamic[
+          FEPrivate`If[
+           DynamicChart`click$13378$13820, {{{1., 0.}, {0., 
+             1.}}, {-0.19667596093488401`, 0.036312069485778135`}}, {{1, 0}, {
+            0, 1}}, {{1, 0}, {0, 1}}], 
+           TrackedSymbols :> {DynamicChart`click$13378$13820}]],
+         "DelayedClickEffect"], 
+        TagBox[GeometricTransformationBox[
+          TagBox[
+           TagBox[
+            TooltipBox[
+             
+             TagBox[{{}, {{}, 
+                InsetBox["\<\"LM\[CapitalSHacek]\"\>", \
+{-0.4294211687537908, 0.5099430402217219}]}},
+              StatusArea[#, 30691]& ,
+              TagBoxNote->"30691"],
+             StyleBox["30691", {}, StripOnInput -> False]],
+            Annotation[#, 
+             Style[30691, {}], "Tooltip"]& ],
+           
+           EventHandlerTag[{
+            "MouseClicked" :> FEPrivate`Set[DynamicChart`click$13386$13820, 
+               FEPrivate`Not[DynamicChart`click$13386$13820]], PassEventsDown -> 
+             True, Method -> "Preemptive", PassEventsUp -> True}]], Dynamic[
+          FEPrivate`If[
+           DynamicChart`click$13386$13820, {{{1., 0.}, {0., 
+             1.}}, {-0.12882635062613726`, 0.1529829120665166}}, {{1, 0}, {0, 
+            1}}, {{1, 0}, {0, 1}}], 
+           TrackedSymbols :> {DynamicChart`click$13386$13820}]],
+         "DelayedClickEffect"], 
+        TagBox[GeometricTransformationBox[
+          TagBox[
+           TagBox[
+            TooltipBox[
+             
+             TagBox[{{}, {{}, 
+                InsetBox["\<\"SDS\"\>", \
+{0.31932487245357083, 0.5852145506367346}]}},
+              StatusArea[#, 42091]& ,
+              TagBoxNote->"42091"],
+             StyleBox["42091", {}, StripOnInput -> False]],
+            Annotation[#, 
+             Style[42091, {}], "Tooltip"]& ],
+           
+           EventHandlerTag[{
+            "MouseClicked" :> FEPrivate`Set[DynamicChart`click$13394$13820, 
+               FEPrivate`Not[DynamicChart`click$13394$13820]], PassEventsDown -> 
+             True, Method -> "Preemptive", PassEventsUp -> True}]], Dynamic[
+          FEPrivate`If[
+           DynamicChart`click$13394$13820, {{{1., 0.}, {0., 1.}}, {
+             0.09579746173607126, 0.17556436519102037`}}, {{1, 0}, {0, 1}}, {{
+            1, 0}, {0, 1}}], 
+           TrackedSymbols :> {DynamicChart`click$13394$13820}]],
+         "DelayedClickEffect"], 
+        TagBox[GeometricTransformationBox[
+          TagBox[
+           TagBox[
+            TooltipBox[
+             
+             TagBox[{{}, {{}, 
+                InsetBox["\<\"Gibanje Svoboda\"\>", \
+{0.12514317474165348, -0.65481572236777}]}},
+              StatusArea[#, 106779]& ,
+              TagBoxNote->"106779"],
+             StyleBox["106779", {}, StripOnInput -> False]],
+            Annotation[#, 
+             Style[106779, {}], "Tooltip"]& ],
+           
+           EventHandlerTag[{
+            "MouseClicked" :> FEPrivate`Set[DynamicChart`click$13402$13820, 
+               FEPrivate`Not[DynamicChart`click$13402$13820]], PassEventsDown -> 
+             True, Method -> "Preemptive", PassEventsUp -> True}]], Dynamic[
+          FEPrivate`If[
+           DynamicChart`click$13402$13820, {{{1., 0.}, {0., 1.}}, {
+             0.037542952422496056`, -0.196444716710331}}, {{1, 0}, {0, 1}}, {{
+            1, 0}, {0, 1}}], 
+           TrackedSymbols :> {DynamicChart`click$13402$13820}]],
+         "DelayedClickEffect"]}, {}}, {}}, {}, {}},
+    DynamicModuleValues:>{}], {{}, {}}, {{{}, {}, {}, {}}, {}}},
+  ContentSelectable->False,
+  DisplayFunction->Identity,
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->Large,
+  PlotLabel->FormBox[
+   "\"Dele\[ZHacek] ilegalnih migracij po strankah\"", TraditionalForm],
+  PlotRange->{{-1., 1.}, {-1., 1.}},
+  PlotRangePadding->Scaled[0.09166666666666669]]], "Output",
+ CellChangeTimes->{3.960008783546377*^9},
+ CellLabel->"Out[80]=",ExpressionUUID->"8af68660-dfea-46e7-a2c6-2a961c01b8e5"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Tabela", ":", "leto"}], ",", "migracije", ",", "stranka"}], 
+   "*)"}], 
+  RowBox[{
+   RowBox[{"tabelaLetoStranka", "=", 
+    RowBox[{"Grid", "[", 
+     RowBox[{
+      RowBox[{"Prepend", "[", 
+       RowBox[{
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"leta", ",", "migracije", ",", "stranke"}], "}"}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Leto\>\"", ",", 
+          "\"\<\[CapitalSHacek]tevilo ilegalnih migracij\>\"", ",", 
+          "\"\<Vodilna stranka\>\""}], "}"}]}], "]"}], ",", 
+      RowBox[{"Frame", "->", "All"}]}], "]"}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.960008785998118*^9, 3.96000879230201*^9}},
+ CellLabel->"In[81]:=",ExpressionUUID->"4c2f622b-87c3-4649-8533-52635ecee6eb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["%81"], "Input",
+ NumberMarks->False,
+ CellLabel->"In[82]:=",ExpressionUUID->"d6b133e4-0078-4a33-b5a3-73bbc81a283d"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"Leto\"\>", "\<\"\[CapitalSHacek]tevilo ilegalnih migracij\"\>", "\<\
+\"Vodilna stranka\"\>"},
+    {"2017", "1930", "\<\"SMC\"\>"},
+    {"2018", "9149", "\<\"SMC\"\>"},
+    {"2019", "16099", "\<\"LM\[CapitalSHacek]\"\>"},
+    {"2020", "14592", "\<\"LM\[CapitalSHacek]\"\>"},
+    {"2021", "10067", "\<\"SDS\"\>"},
+    {"2022", "32024", "\<\"SDS\"\>"},
+    {"2023", "60587", "\<\"Gibanje Svoboda\"\>"},
+    {"2024", "46192", "\<\"Gibanje Svoboda\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.960008794526038*^9},
+ CellLabel->"Out[82]=",ExpressionUUID->"120b5abd-a287-4707-b6a1-de672b824bf5"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Sprememba", " ", "\[SHacek]tevila", " ", "migracij", " ", "po", " ", 
+    "letih", " ", "v", " ", "procentih"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.960014662325376*^9, 3.960014666469201*^9}, 
+   3.9600147476274843`*^9, {3.960014918267666*^9, 3.960014992884721*^9}, 
+   3.960015052680744*^9, 
+   3.960015133388813*^9},ExpressionUUID->"e5a7588b-b81d-404a-85e2-\
+2ec74675cfdc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Od", " ", "leta", " ", "in", " ", "do", " ", "leta"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"odLet", "=", 
+     RowBox[{"Most", "[", "leta", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"doLet", "=", 
+     RowBox[{"Rest", "[", "leta", "]"}]}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "Izra\[CHacek]un", " ", "odstotnih", " ", "sprememb", " ", "kot", " ", 
+      "decimalnih", " ", "\[SHacek]tevil"}], ",", 
+     RowBox[{"zaokro\[ZHacek]enih", " ", "na", " ", "2", " ", "decimali"}]}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"spremembe", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Round", "[", 
+        RowBox[{
+         RowBox[{"100.0", "*", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"migracije", "[", 
+              RowBox[{"[", 
+               RowBox[{"i", "+", "1"}], "]"}], "]"}], "-", 
+             RowBox[{"migracije", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}], ")"}], "/", 
+           RowBox[{"migracije", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}]}], ",", "0.01"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{
+          RowBox[{"Length", "[", "migracije", "]"}], "-", "1"}]}], "}"}]}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Pretvori", " ", "v", " ", "nize", " ", "s"}], " ", "+", " ", 
+     "ali", " ", "-", " ", "predznakom"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"spremembeStr", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"#", ">=", "0"}], ",", 
+          RowBox[{"\"\<+\>\"", "<>", 
+           RowBox[{"ToString", "[", "#", "]"}]}], ",", 
+          RowBox[{"ToString", "[", "#", "]"}]}], "]"}], "&"}], ",", 
+       "spremembe"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Vodilna", " ", "stranka", " ", "v", " ", "drugem", " ", "letu", " ", 
+     "obdobja"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"strankeObdobij", "=", 
+     RowBox[{"Rest", "[", "stranke", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Ustvari", " ", "tabelo"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"tabelaProcentSprememb", "=", 
+     RowBox[{"Grid", "[", 
+      RowBox[{
+       RowBox[{"Prepend", "[", 
+        RowBox[{
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{
+           "odLet", ",", "doLet", ",", "spremembeStr", ",", 
+            "strankeObdobij"}], "}"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<Od leta\>\"", ",", "\"\<Do leta\>\"", ",", 
+           "\"\<Sprememba (%)\>\"", ",", "\"\<Vodilna stranka\>\""}], "}"}]}],
+         "]"}], ",", 
+       RowBox[{"Frame", "->", "All"}], ",", 
+       RowBox[{"Background", "->", 
+        RowBox[{"{", 
+         RowBox[{"None", ",", 
+          RowBox[{"{", 
+           RowBox[{"LightGray", ",", 
+            RowBox[{"{", "White", "}"}]}], "}"}]}], "}"}]}]}], "]"}]}], ";"}],
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Prika\[ZHacek]i", " ", "tabelo"}], "*)"}], "\n", 
+   "tabelaProcentSprememb", "\n"}]}]], "Input",
+ CellChangeTimes->{{3.960015375956683*^9, 3.960015414468424*^9}},
+ CellLabel->
+  "In[175]:=",ExpressionUUID->"31304844-0f2d-45ee-82ab-d4d6720ac5a1"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"Od leta\"\>", "\<\"Do leta\"\>", "\<\"Sprememba (%)\"\>", \
+"\<\"Vodilna stranka\"\>"},
+    {"2017", "2018", "\<\"+374.04\"\>", "\<\"SMC\"\>"},
+    {"2018", "2019", "\<\"+75.96\"\>", "\<\"LM\[CapitalSHacek]\"\>"},
+    {"2019", "2020", "\<\"-9.36\"\>", "\<\"LM\[CapitalSHacek]\"\>"},
+    {"2020", "2021", "\<\"-31.01\"\>", "\<\"SDS\"\>"},
+    {"2021", "2022", "\<\"+218.11\"\>", "\<\"SDS\"\>"},
+    {"2022", "2023", "\<\"+89.19\"\>", "\<\"Gibanje Svoboda\"\>"},
+    {"2023", "2024", "\<\"-23.76\"\>", "\<\"Gibanje Svoboda\"\>"}
+   },
+   AutoDelete->False,
+   GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {
+       GrayLevel[0.85], {
+        GrayLevel[1]}}},
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.9600153855909967`*^9, 3.9600154243016253`*^9},
+ CellLabel->
+  "Out[181]=",ExpressionUUID->"9ff82c4c-de26-4903-8c29-ddc4101b1613"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1009, 690},
+WindowMargins->{{Automatic, 61}, {42, Automatic}},
+FrontEndVersion->"13.3 for Mac OS X x86 (64-bit) (June 3, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"522ca694-025a-4e75-b63c-727ca2319f6c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 286, 6, 222, "Title",ExpressionUUID->"88418f0e-da48-4f6c-8dad-608912bc2d02"],
+Cell[869, 30, 913, 23, 96, "Input",ExpressionUUID->"cef359a3-b887-4952-b1d2-9f79f957421d"],
+Cell[1785, 55, 1073, 28, 100, "Input",ExpressionUUID->"9bba24f8-3fa8-4963-ab50-29808a166089"],
+Cell[CellGroupData[{
+Cell[2883, 87, 129, 2, 30, "Input",ExpressionUUID->"19ef136f-6292-4f44-adda-fcd7c729503f"],
+Cell[3015, 91, 6461, 168, 385, "Output",ExpressionUUID->"980507c1-d052-40b3-8e41-49d5e178bd6d"]
+}, Open  ]],
+Cell[9491, 262, 854, 25, 94, "Input",ExpressionUUID->"a978315d-3947-4a2a-beea-6f680b13abd1"],
+Cell[CellGroupData[{
+Cell[10370, 291, 212, 5, 30, "Input",ExpressionUUID->"21c63278-22a5-4ca6-b5e2-134bcfa77389"],
+Cell[10585, 298, 234, 5, 34, "Output",ExpressionUUID->"3b355c24-bc75-4ad8-9045-0282690dc2bd"]
+}, Open  ]],
+Cell[10834, 306, 381, 9, 30, "Input",ExpressionUUID->"0166d548-c962-46cb-94ab-ecd2549935c9"],
+Cell[CellGroupData[{
+Cell[11240, 319, 738, 20, 52, "Input",ExpressionUUID->"5aa80816-cdb9-422e-a75a-4ae752ac0253"],
+Cell[11981, 341, 410, 8, 34, "Output",ExpressionUUID->"7756c242-5775-4774-b1ae-839ecda68289"]
+}, Open  ]],
+Cell[12406, 352, 1111, 28, 94, "Input",ExpressionUUID->"0dcbbb5a-d8e1-4cee-8c4b-888f47acf86b"],
+Cell[CellGroupData[{
+Cell[13542, 384, 129, 2, 30, "Input",ExpressionUUID->"55a0bcb7-42e4-4b22-a43c-9e06b73a70dd"],
+Cell[13674, 388, 4585, 119, 379, "Output",ExpressionUUID->"0a7b085f-d98d-4a26-927e-38186ec36679"]
+}, Open  ]],
+Cell[18274, 510, 734, 17, 73, "Input",ExpressionUUID->"ed292a72-6443-4ac2-985c-94cbcf303305"],
+Cell[CellGroupData[{
+Cell[19033, 531, 129, 2, 30, "Input",ExpressionUUID->"c93eed21-e1c7-4b11-8b1b-8408dd0ff411"],
+Cell[19165, 535, 11974, 277, 607, "Output",ExpressionUUID->"8af68660-dfea-46e7-a2c6-2a961c01b8e5"]
+}, Open  ]],
+Cell[31154, 815, 841, 23, 98, "Input",ExpressionUUID->"4c2f622b-87c3-4649-8533-52635ecee6eb"],
+Cell[CellGroupData[{
+Cell[32020, 842, 129, 2, 30, "Input",ExpressionUUID->"d6b133e4-0078-4a33-b5a3-73bbc81a283d"],
+Cell[32152, 846, 799, 18, 191, "Output",ExpressionUUID->"120b5abd-a287-4707-b6a1-de672b824bf5"]
+}, Open  ]],
+Cell[32966, 867, 443, 10, 30, "Input",ExpressionUUID->"e5a7588b-b81d-404a-85e2-2ec74675cfdc"],
+Cell[CellGroupData[{
+Cell[33434, 881, 3558, 97, 472, "Input",ExpressionUUID->"31304844-0f2d-45ee-82ab-d4d6720ac5a1"],
+Cell[36995, 980, 1016, 21, 173, "Output",ExpressionUUID->"9ff82c4c-de26-4903-8c29-ddc4101b1613"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
