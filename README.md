@@ -1,4 +1,3 @@
-ANALIZA KORELACIJE ŠTEVILA ILEGALNIH MIGRACIJ GLEDE NA POLITIČNO STANJE DRŽAV V EVROPSKI UNIJI V ZADNJIH 8 LETIH
+ANALIZA KORELACIJE ŠTEVILA ILEGALNIH MIGRACIJ GLEDE NA POLITIČNO STRANKO V REPUBLIKI SLOVENIJI ZA OBDOBJE 2017-2024
 
-V seminarski nalogi bom obravnavala kako se je spreminjalo število ilegalnih migracij v države Evropske Unije glede na politično stranko, ki je bila v danem mandatu vodilna v posamezni državi. Obdobje analize je 8 let, torej 2 mandata. 
-Prikazala bom število migracij in procent celotnega prebivalstva, ki so ga po koncu enega mandata predstavljali migrantje. Pri tem bom uporabila tudi grafični prikaz glede na leto, državo in vladajočo stranko. Obravnavala bom tudi glede na politično usmerjenost posamezne stranke.
+V seminarski nalogi bom obravnavala kako se je spreminjalo število ilegalnih migracij v RS za obdobje 2017-2024 glede na vodilno stranko v danem obdobju. Podatke bom prikazala grafično - število migracij glede na leto, število migracij glede na stranko, delež števila migracij v času posamezne stranke glede na celotno število migracij v tem obdobju. Izračunala bo tudi procentualne spremembe po letih in analizirala naraščanje oz padanje števila glede na politično usmerjenost takratne stranke.
